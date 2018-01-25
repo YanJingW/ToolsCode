@@ -2,11 +2,21 @@ package com.yanjingw.tool.toolscode.bitmap;
 
 
 import android.graphics.Bitmap;
+import android.os.Environment;
 
 import java.io.File;
 import java.io.FileOutputStream;
 
 public class BitmapSaveToLocal {
+
+    /**
+     * 手机根目录
+     */
+    File ROOT = Environment.getExternalStorageDirectory();
+    /**
+     * 对应路径为"/storage/emulated/0/DCIM/"
+     */
+    File appDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM);
 
     /**
      * 将Bitmap写入SD卡中的一个文件中
